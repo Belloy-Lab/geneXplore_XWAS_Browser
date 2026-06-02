@@ -28,7 +28,7 @@ To properly account for XCI, association results are stratified by four modeling
 - **Male** — male-only analysis
 
 <p align="center">
-  <img src="docs/Xchr_modeling_fig.jpg" alt="X-Chromosome Modeling" width="300"/>
+  <img src="docs/Xchr_modeling_fig.jpg" alt="X-Chromosome Modeling" width="600"/>
 </p>
 
 ### 2. Single-Chromosome Binning Fix
