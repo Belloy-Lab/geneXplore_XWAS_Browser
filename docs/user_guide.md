@@ -13,9 +13,7 @@ The search bar on the home page accepts:
 - **Gene name** — e.g. `SLC9A7`
 - **Variant** — e.g. `chrX-46691127-A-C | rs5924530`
 
-<p align="center">
-  <img src="docs/images/home_search_example.png" alt="Search example" width="300"/>
-</p>
+![Stratification dropdown](images/home_search_example.png)
 
 ---
 
