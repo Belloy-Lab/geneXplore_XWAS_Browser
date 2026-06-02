@@ -68,9 +68,8 @@ geneXplore_XWAS_Browser/
 │                                               frontend and backend
 └── docs/
     ├── pipeline_overview.png                ← full workflow schematic
-    ├── manifest_template.csv                ← example input format
-    └── manifest_format.md                   ← column and stratification
-                                                naming conventions
+    ├── geneXplore.jpg                       ← geneXplore logo
+    └── Xchr_modeling_fig.jpg                ← X-chromosome modeling overview
 ```
 
 ---
