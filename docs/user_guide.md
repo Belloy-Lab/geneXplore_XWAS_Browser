@@ -34,14 +34,14 @@ All results in geneXplore are stratified by **ancestry** and **sex modeling appr
 ### Sex Modeling Approach
 | Value | Description |
 |-------|-------------|
-| `rXCI` | Random X-chromosome inactivation — random effects meta-analysis combining male and female summary statistics, assuming random XCI in females |
-| `eXCI` | Escape from X-chromosome inactivation — models loci where females express both X chromosomes, rather than inactivating one |
+| `rXCI` | Random X-chromosome inactivation  |
+| `eXCI` | Escape from X-chromosome inactivation — models loci where females express both X chromosomes |
 | `female` | Female-only analysis |
 | `male` | Male-only analysis |
 
 > Not all stratifications are available for every phenotype — dropdowns will reflect only the strata present for the selected trait.
 
-![Stratification dropdown](docs/images/stratification_dropdown.png)
+![Stratification dropdown](images/stratification_dropdown.png)
 
 ---
 
@@ -53,7 +53,7 @@ The Manhattan plot displays association results across the X chromosome. The Mia
 - Hovering over a variant displays its chromosome position, alleles, and p-value
 - Clicking a variant navigates to its variant page with full association details
 
-![Manhattan/Miami plot example](docs/images/miami_plot_example.png)
+![Manhattan/Miami plot example](images/miami_plot_example.png)
 
 ---
 
@@ -61,7 +61,7 @@ The Manhattan plot displays association results across the X chromosome. The Mia
 
 The PheWAS (Phenome-Wide Association Study) plot displays association results for a single variant across all phenotypes in the browser. This is useful for assessing the pleiotropic effects of a variant of interest across traits and disease categories.
 
-![PheWAS plot example](docs/images/phewas_plot_example.png)
+![PheWAS plot example](images/phewas_plot_example.png)
 
 ---
 
@@ -77,7 +77,7 @@ Key features:
 - **LD population** — choose the reference population used to calculate linkage disequilibrium (LD)
 - **Download** — export the regional plot directly
 
-![Top Hits example](docs/images/top_hits_example.png)
+![Top Hits example](images/top_hits_example.png)
 
 ---
 
@@ -87,7 +87,7 @@ The phenotypes table lists all available traits in the browser. It can be:
 - **Sorted** by any column (e.g. top p-value)
 - **Filtered** by category, ancestry, or sex stratum
 
-![Phenotypes table example](docs/images/phenotypes_table_example.png)
+![Phenotypes table example](images/phenotypes_table_example.png)
 
 ---
 
@@ -107,7 +107,7 @@ Summary statistics for any phenotype-stratum combination can be downloaded direc
 | `P` | Association p-value |
 | `TEST` | Statistical test used for the association — always `ADD` (additive model) |
 
-![Download example](docs/images/download_example.png)
+![Download example](images/download_example.png)
 
 ---
 

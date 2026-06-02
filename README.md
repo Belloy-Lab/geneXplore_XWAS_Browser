@@ -54,8 +54,8 @@ geneXplore_XWAS_Browser/
 │
 ├── example_codes/
 │   ├── 01_xwas_modeling/
-│   │   ├── rXCI_eXCI_genotype_modeling.sh   ← PLINK raw genotype modeling
-│   │   └── rXCI_eXCI_meta_analysis.R        ← random effects meta-analysis
+│   │   ├── rXCI_eXCI_genotype_modeling.R   ← PLINK raw genotype modeling
+│   │   └── eXCI_meta_analysis.R            ← random effects meta-analysis
 │   │                                           from male/female summary stats
 │   ├── 02_liftover/
 │   │   └── liftover_hg19_to_hg38.R          ← GRCh38 liftover
