@@ -82,8 +82,8 @@ We welcome the inclusion of additional XWAS summary statistics in the public gen
 
 If you use geneXplore in your research, please cite:
 
-> **[CITATION PLACEHOLDER — Bioinformatics Application Note, in preparation]**
-> **Bellavance, J., Xiao, H., Chang, L., Kazemi, M., Wickramasinghe, S., Mayhew, A.J., Raina, P., VandeHaar, P., Taliun, D., & Gagliano Taliun, S.A. (2026). Exploring and visualizing stratified GWAS results with PheWeb2. Nature Genetics. https://doi.org/10.1038/s41588-025-02469-8**
+- **[CITATION PLACEHOLDER — Bioinformatics Application Note, in preparation]**
+- **Bellavance, J., Xiao, H., Chang, L., Kazemi, M., Wickramasinghe, S., Mayhew, A.J., Raina, P., VandeHaar, P., Taliun, D., & Gagliano Taliun, S.A. (2026). Exploring and visualizing stratified GWAS results with PheWeb2. Nature Genetics. https://doi.org/10.1038/s41588-025-02469-8**
 
 ---
 
