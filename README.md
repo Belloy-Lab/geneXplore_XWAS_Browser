@@ -11,7 +11,7 @@ This is a critical oversight, as the X chromosome is increasingly recognized as 
 The browser is publicly available at: **[INSERT FENIX URL]**
 
 <p align="center">
-  <img src="docs/geneXplore.jpg" alt="geneXplore Logo" width="300"/>
+  <img src="docs/images/geneXplore.jpg" alt="geneXplore Logo" width="300"/>
 </p>
 
 ---
@@ -28,7 +28,7 @@ To properly account for XCI, association results are stratified by four modeling
 - **Male** — male-only analysis
 
 <p align="center">
-  <img src="docs/Xchr_modeling_fig.jpg" alt="X-Chromosome Modeling" width="900"/>
+  <img src="docs/images/Xchr_modeling_fig.jpg" alt="X-Chromosome Modeling" width="900"/>
 </p>
 
 ### 2. Single-Chromosome Binning Fix
@@ -67,9 +67,18 @@ geneXplore_XWAS_Browser/
 │       └── update_significance_threshold.py ← sync P<1e-5 across
 │                                               frontend and backend
 └── docs/
+    ├── user_guide.md                        ← geneXplore user guide
     ├── pipeline_overview.png                ← full workflow schematic
-    ├── geneXplore.jpg                       ← geneXplore logo
-    └── Xchr_modeling_fig.jpg                ← X-chromosome modeling overview
+    └── images/
+        ├── geneXplore.jpg                   ← geneXplore logo
+        ├── Xchr_modeling_fig.jpg            ← X-chromosome modeling overview
+        ├── home_search_example.png          ← searching from home page
+        ├── stratification_dropdown.png      ← stratification dropdown menu
+        ├── miami_plot_example.png           ← Miami plot
+        ├── phewas_plot_example.png          ← PheWAS plot
+        ├── top_hits_example.png             ← stacked locus zoom plot
+        ├── phenotypes_table_example.png     ← phenotypes table
+        └── download_example.png             ← downloaded summary stat format
 ```
 
 ---
