@@ -6,7 +6,7 @@ The X chromosome remains one of the most understudied regions of the human genom
 
 This is a critical oversight, as the X chromosome is increasingly recognized as an important contributor to complex disease, particularly given well-established sex differences in the prevalence, severity, and progression of many conditions including neurodegenerative diseases, autoimmune disorders, and cardiovascular disease. Making X-chromosome association data accessible to the broader research community is therefore an important step toward understanding the genetic architecture of sex-differentiated traits.
 
-**geneXplore** addresses this gap by providing a harmonized, publicly accessible XWAS browser built on the [PheWeb2](https://github.com/GaglianoTaliun-Lab/PheWeb2)/[PheWeb2-API](https://github.com/GaglianoTaliun-Lab/PheWeb2-API) framework, extended and tailored specifically for X-chromosome analysis. The browser hosts summary statistics from multiple XWAS studies across dichotomous traits, continuous traits, and brain single-cell trans-eQTLs, and allows users to explore and download association results interactively via Manhattan/Miami plots, PheWAS plots, and phenotype tables.
+**geneXplore** addresses this gap by providing a harmonized, publicly accessible XWAS browser built on the [PheWeb2](https://github.com/GaglianoTaliun-Lab/PheWeb2) & [PheWeb2-API](https://github.com/GaglianoTaliun-Lab/PheWeb2-API) framework, extended and tailored specifically for X-chromosome analysis. The browser hosts summary statistics from multiple XWAS studies across dichotomous traits, continuous traits, and brain single-cell trans-eQTLs, and allows users to explore and download association results interactively via Manhattan/Miami plots, PheWAS plots, and phenotype tables.
 
 The browser is publicly available at: **[INSERT FENIX URL]**
 
@@ -22,8 +22,8 @@ geneXplore extends PheWeb2 with the following X-chromosome-specific modification
 
 ### 1. X-Chromosome Inactivation (XCI) Modeling
 To properly account for XCI, association results are stratified by four modeling approaches:
-- **rXCI** — random X-chromosome inactivation 
-- **eXCI** — escape from X-chromosome inactivation
+- **rXCI** — random X-chromosome inactivation (Females: 0/1/2; Males: 0/2)
+- **eXCI** — escape from X-chromosome inactivation (Females: 0/1/2; Males: 0/1; double dosage)
 - **Female** — female-only analysis
 - **Male** — male-only analysis
 
