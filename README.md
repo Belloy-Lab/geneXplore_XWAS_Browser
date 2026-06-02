@@ -27,6 +27,10 @@ To properly account for XCI, association results are stratified by four modeling
 - **Female** — female-only analysis
 - **Male** — male-only analysis
 
+<p align="center">
+  <img src="docs/Xchr_modeling_fig.jpg" alt="X-Chromosome Modeling" width="300"/>
+</p>
+
 ### 2. Single-Chromosome Binning Fix
 The default PheWeb2 Manhattan plot binning algorithm was designed for genome-wide data and produces incorrect bin sizes when applied to a single chromosome. geneXplore corrects this by setting `BIN_LENGTH=3e4` in `pheweb_override/manhattan.py`.
 
