@@ -46,8 +46,23 @@ The default PheWeb2 Manhattan plot binning algorithm was designed for genome-wid
 ### 3. Significance Threshold
 geneXplore uses a suggestive significance threshold of **P < 1×10⁻⁵** for visualization, reflecting the reduced multiple testing burden of X-chromosome-only analyses compared to genome-wide studies. The backend peak-calling threshold is set to `MANHATTAN_PEAK_PVAL_THRESHOLD=1e-5` accordingly.
 
-### 4. GRCh38 Liftover
-The standard PheWeb2 framework labels a limited number of gene names on Manhattan plots, optimized for genome-wide views. Since geneXplore displays only the X chromosome, we increased the maximum number of gene labels displayed per plot to 12, with labels restricted to variants reaching **P < 1×10<sup>-6</sup>** and a minimum inter-label distance of 1 Mb to avoid overlapping annotations, improving the interpretability of X-chromosome association landscapes.
+### 4. Gene label density
+The standard PheWeb2 framework labels a limited number of gene names on Manhattan plots, optimized for genome-wide views. Since geneXplore displays only the X chromosome, we increased the maximum number of gene labels displayed per plot to 12, with labels restricted to variants reaching **P < 1×10<sup>-6</sup>** and a minimum inter-label distance of 1 Mb to avoid overlapping annotations, improving the interpretability of X-chromosome association landscapes. The following changes were made in `src/components/ManhattanPlot.vue` and `src/components/MiamiPlot.vue`:
+
+```javascript
+// Filter to peak variants with p < 1e-5, sorted by p-value
+var sorted_variants = _.sortBy(_.where(unbinned_variants, {peak: true}), _.property('pval'))
+    .filter(function(d) { return d.pval < 1e-5; });
+
+// Require minimum 1 Mb distance between labeled variants
+var is_close = selected_variants.some(function(selected) {
+    return selected.chrom === variant.chrom && Math.abs(selected.pos - variant.pos) <= 1000000;
+});
+
+// Increase maximum labeled variants from 8 to 12
+variants_to_label = filtered_variants.slice(0, 12);
+` ` `
+```
 
 ### 5. GRCh38 Liftover
 All summary statistics are aligned to **GRCh38 (hg38)** prior to ingestion.
