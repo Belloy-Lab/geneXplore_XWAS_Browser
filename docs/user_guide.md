@@ -60,7 +60,7 @@ All results in geneXplore are stratified by **ancestry** and **sex modeling appr
 The Manhattan plot displays association results across the X chromosome. The Miami plot displays two strata simultaneously (top and bottom panels) for direct visual comparison.
 
 - The horizontal dashed line represents the suggestive significance threshold of **P < 1×10⁻⁵**, chosen to reflect the reduced multiple testing burden of X-chromosome-only analyses
-- Note: Gene labels are only present for top variants with: **P < 1×10⁻6**, to reduce thenumber of visualized genes and focus on the most significant associations
+- Note: Gene labels are only present for top variants with: **P < 1×10⁻^6^**, to reduce thenumber of visualized genes and focus on the most significant associations
 - Hovering over a variant displays its chromosome position, alleles, and p-value
 - Clicking a variant navigates to its variant page with full association details and locus zoom plots
 
