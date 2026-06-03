@@ -47,6 +47,9 @@ The default PheWeb2 Manhattan plot binning algorithm was designed for genome-wid
 geneXplore uses a suggestive significance threshold of **P < 1×10⁻⁵** for visualization, reflecting the reduced multiple testing burden of X-chromosome-only analyses compared to genome-wide studies. The backend peak-calling threshold is set to `MANHATTAN_PEAK_PVAL_THRESHOLD=1e-5` accordingly.
 
 ### 4. GRCh38 Liftover
+The standard PheWeb2 framework labels a limited number of gene names on Manhattan plots, optimized for genome-wide views. Since geneXplore displays only the X chromosome, we increased the maximum number of gene labels displayed per plot to 12, with labels restricted to variants reaching **P < 1×10<sup>-6</sup>** and a minimum inter-label distance of 1 Mb to avoid overlapping annotations, improving the interpretability of X-chromosome association landscapes.
+
+### 5. GRCh38 Liftover
 All summary statistics are aligned to **GRCh38 (hg38)** prior to ingestion.
 
 ---
