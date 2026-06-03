@@ -8,7 +8,7 @@ This is a critical oversight, as the X chromosome is increasingly recognized as 
 
 **geneXplore** addresses this gap by providing a harmonized, publicly accessible XWAS browser built on the [PheWeb2](https://github.com/GaglianoTaliun-Lab/PheWeb2) & [PheWeb2-API](https://github.com/GaglianoTaliun-Lab/PheWeb2-API) framework, extended and tailored specifically for X-chromosome analysis. The browser hosts summary statistics from multiple XWAS studies across dichotomous traits, continuous traits, and brain single-cell trans-eQTLs, and allows users to explore and download association results interactively via Manhattan/Miami plots, PheWAS plots, and phenotype tables.
 
-The browser is publicly available at: **[INSERT FENIX URL]**
+The browser is publicly available at: **http://fenix.psych.wucon.wustl.edu:5103**
 
 <p align="center">
   <img src="docs/images/geneXplore.jpg" alt="geneXplore Logo" width="300"/>
