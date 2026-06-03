@@ -17,7 +17,17 @@ The search bar on the home page accepts:
 
 ---
 
-## 2. Selecting Stratifications
+## 2. Phenotypes Table
+
+The phenotypes table lists all available traits in the browser. It can be:
+- **Sorted** by any column (e.g. top p-value)
+- **Filtered** by category, ancestry, or sex stratum
+
+![Phenotypes table example](images/phenotypes_table_example.png)
+
+---
+
+## 3. Selecting Stratifications
 
 All results in geneXplore are stratified by **ancestry** and **sex modeling approach**. Use the dropdown menus to select your stratum of interest.
 
@@ -45,27 +55,40 @@ All results in geneXplore are stratified by **ancestry** and **sex modeling appr
 
 ---
 
-## 3. Manhattan / Miami Plot
+## 4. Manhattan / Miami Plot
 
 The Manhattan plot displays association results across the X chromosome. The Miami plot displays two strata simultaneously (top and bottom panels) for direct visual comparison.
 
 - The horizontal dashed line represents the suggestive significance threshold of **P < 1×10⁻⁵**, chosen to reflect the reduced multiple testing burden of X-chromosome-only analyses
 - Hovering over a variant displays its chromosome position, alleles, and p-value
-- Clicking a variant navigates to its variant page with full association details
+- Clicking a variant navigates to its variant page with full association details and locus zoom plots
 
 ![Manhattan/Miami plot example](images/miami_plot_example.png)
 
 ---
 
-## 4. PheWAS Plot
+## 5. Downloading Summary Statistics
 
-The PheWAS (Phenome-Wide Association Study) plot displays association results for a single variant across all phenotypes in the browser. This is useful for assessing the pleiotropic effects of a variant of interest across traits and disease categories.
+Summary statistics for any phenotype-stratum combination can be downloaded directly from the browser in the Manhattan/Miami plot page. If you use downloaded summary stats, please cite the source paper by referencing the About tab's 'Pheweb2 Data' section. Downloaded files are tab-delimited txt files and contain the following columns:
 
-![PheWAS plot example](images/phewas_plot_example.png)
+| Column | Description |
+|--------|-------------|
+| `chrom` | Chromosome (X) |
+| `pos` | Base pair position (GRCh38/hg38) |
+| `ref` | Reference allele |
+| `alt` | Alternative allele — this is the effect allele to which `BETA`, `SE`, and `P` refer |
+| `rsids` | rsID |
+| `nearest_genes` | Nearest gene to position |
+| `pval` | Association p-value |
+| `beta` | Effect size estimate (log odds ratio for dichotomous traits; regression coefficient for continuous traits) for the `ALT` allele |
+| `sebeta` | Standard error of `BETA` |
+| `af` | Allele frequency of the `ALT` allele within the specific dataset for that stratum (e.g. female-only AF for female strata) |
+
+![Download example](images/download_example.png)
 
 ---
 
-## 5. Top Hits
+## 6. Top Hits
 
 The Top Hits tab allows users to visually explore genetic overlap (pleiotropy) across multiple phenotypes simultaneously within a focused genomic region.
 
@@ -81,33 +104,11 @@ Key features:
 
 ---
 
-## 6. Phenotypes Table
+## 7. PheWAS Plot
 
-The phenotypes table lists all available traits in the browser. It can be:
-- **Sorted** by any column (e.g. top p-value)
-- **Filtered** by category, ancestry, or sex stratum
+The PheWAS (Phenome-Wide Association Study) plot displays association results for a single variant across all phenotypes in the browser. This is useful for assessing the pleiotropic effects of a variant of interest across traits and disease categories. From the home page you can search a variant by its chromosome position or rsID, and the resulting PheWAS plot will show the variant's associations across all phenotypes, stratifications, and categories. Users can download associations for the variant of interest across all traits and stratifications directly from the PheWAS plot page.
 
-![Phenotypes table example](images/phenotypes_table_example.png)
-
----
-
-## 7. Downloading Summary Statistics
-
-Summary statistics for any phenotype-stratum combination can be downloaded directly from the browser. Downloaded files are tab-delimited and contain the following columns:
-
-| Column | Description |
-|--------|-------------|
-| `CHROM` | Chromosome (X) |
-| `POS` | Base pair position (GRCh38/hg38) |
-| `REF` | Reference allele |
-| `ALT` | Alternative allele — this is the effect allele to which `BETA`, `SE`, and `P` refer |
-| `AF` | Allele frequency of the `ALT` allele within the specific dataset for that stratum (e.g. female-only AF for female strata) |
-| `BETA` | Effect size estimate (log odds ratio for dichotomous traits; regression coefficient for continuous traits) for the `ALT` allele |
-| `SE` | Standard error of `BETA` |
-| `P` | Association p-value |
-| `TEST` | Statistical test used for the association — always `ADD` (additive model) |
-
-![Download example](images/download_example.png)
+![PheWAS plot example](images/phewas_plot_example.png)
 
 ---
 
