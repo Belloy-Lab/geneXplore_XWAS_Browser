@@ -58,6 +58,8 @@ geneXplore_XWAS_Browser/
 │
 ├── README.md
 │
+├── user_guide.md                            ← geneXplore user guide
+│
 ├── example_codes/
 │   ├── 01_xwas_modeling/
 │   │   ├── rXCI_eXCI_genotype_modeling.R    ← PLINK raw genotype modeling
@@ -73,7 +75,6 @@ geneXplore_XWAS_Browser/
 │       └── update_significance_threshold.md ← sync P<1e-5 across
 │                                               frontend and backend
 └── docs/
-    ├── user_guide.md                        ← geneXplore user guide
     ├── pipeline_overview.png                ← full workflow schematic
     └── images/
         ├── geneXplore.jpg                   ← geneXplore logo
