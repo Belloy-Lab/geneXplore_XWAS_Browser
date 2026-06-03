@@ -16,6 +16,15 @@ The browser is publicly available at: **http://fenix.psych.wucon.wustl.edu:5103*
 
 ---
 
+## Citation
+
+If you use geneXplore in your research, please cite:
+
+- **[CITATION PLACEHOLDER — Bioinformatics Application Note, in preparation]**
+- **Bellavance, J., Xiao, H., Chang, L., Kazemi, M., Wickramasinghe, S., Mayhew, A.J., Raina, P., VandeHaar, P., Taliun, D., & Gagliano Taliun, S.A. (2026). Exploring and visualizing stratified GWAS results with PheWeb2. Nature Genetics. https://doi.org/10.1038/s41588-025-02469-8**
+
+---
+
 ## X-Chromosome Specific Modifications
 
 geneXplore extends PheWeb2 with the following X-chromosome-specific modifications:
@@ -84,15 +93,6 @@ geneXplore_XWAS_Browser/
 ## Adding Your Data to geneXplore
 
 We welcome the inclusion of additional XWAS summary statistics in the public geneXplore browser. If you have X-chromosome association results you would like to make publicly available through geneXplore, please contact us at **noahc@wustl.edu** or **belloy@wustl.edu**. 
-
----
-
-## Citation
-
-If you use geneXplore in your research, please cite:
-
-- **[CITATION PLACEHOLDER — Bioinformatics Application Note, in preparation]**
-- **Bellavance, J., Xiao, H., Chang, L., Kazemi, M., Wickramasinghe, S., Mayhew, A.J., Raina, P., VandeHaar, P., Taliun, D., & Gagliano Taliun, S.A. (2026). Exploring and visualizing stratified GWAS results with PheWeb2. Nature Genetics. https://doi.org/10.1038/s41588-025-02469-8**
 
 ---
 
