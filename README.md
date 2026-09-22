@@ -20,7 +20,7 @@ The browser is publicly available at: **http://fenix.psych.wucon.wustl.edu:5103*
 
 If you use geneXplore in your research, please cite:
 
-- **[preprint link once available]**
+- **Cook N, Boulais-Richard J, Zeng Y, et al. geneXplore: An Interactive Browser for X Chromosome-Wide Association Study Results. Preprint. medRxiv. 2026;2026.07.14.26357489. Published 2026 Jul 14. doi:10.64898/2026.07.14.26357489**
 - **Bellavance, J., Xiao, H., Chang, L., Kazemi, M., Wickramasinghe, S., Mayhew, A.J., Raina, P., VandeHaar, P., Taliun, D., & Gagliano Taliun, S.A. (2026). Exploring and visualizing stratified GWAS results with PheWeb2. Nature Genetics. https://doi.org/10.1038/s41588-025-02469-8**
 
 ---
