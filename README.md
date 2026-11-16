@@ -82,7 +82,6 @@ geneXplore_XWAS_Browser/
 │       └── gene_label_settings.md               ← gene label rules on Manhattan/Miami plots
 │                                                  
 └── docs/
-    ├── pipeline_overview.png                ← full workflow schematic
     └── images/
         ├── geneXplore.jpg                   ← geneXplore logo
         ├── Xchr_modeling_fig.jpg            ← X-chromosome modeling overview
