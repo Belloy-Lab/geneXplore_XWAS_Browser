@@ -6,9 +6,9 @@ The X chromosome remains one of the most understudied regions of the human genom
 
 This is a critical oversight, as the X chromosome is increasingly recognized as an important contributor to complex disease, particularly given well-established sex differences in the prevalence, severity, and progression of many conditions including neurodegenerative diseases, autoimmune disorders, and cardiovascular disease. Making X-chromosome association data accessible to the broader research community is therefore an important step toward understanding the genetic architecture of sex-differentiated traits.
 
-**geneXplore** addresses these gaps by providing a harmonized, publicly accessible XWAS browser built on the [PheWeb2](https://github.com/GaglianoTaliun-Lab/PheWeb2) & [PheWeb2-API](https://github.com/GaglianoTaliun-Lab/PheWeb2-API) framework, extended and tailored specifically for X-chromosome summary statistics. The browser hosts summary statistics from multiple XWAS studies across dichotomous traits, continuous traits, and brain single-cell trans-eQTLs, and allows users to explore and download association results interactively via Manhattan/Miami plots, PheWAS plots, and phenotype tables.
+**geneXplore** addresses these gaps by providing a harmonized, publicly accessible XWAS browser built on the [PheWeb2](https://github.com/GaglianoTaliun-Lab/PheWeb2) & [PheWeb2-API](https://github.com/GaglianoTaliun-Lab/PheWeb2-API) framework, extended and tailored specifically for X-chromosome summary statistics. The browser hosts summary statistics from multiple XWAS studies across dichotomous traits, continuous traits, and brain cell-type eQTLs, and allows users to explore and download association results interactively via Manhattan/Miami plots, PheWAS plots, and phenotype tables.
 
-The browser is publicly available at: **http://fenix.psych.wucon.wustl.edu:5103**
+The browser is publicly available at: **https://genexplore.wustl.edu**
 
 <p align="center">
   <img src="docs/images/geneXplore.jpg" alt="geneXplore Logo" width="300"/>
@@ -47,10 +47,10 @@ The default PheWeb2 Manhattan plot binning algorithm was designed for genome-wid
 geneXplore uses a suggestive significance threshold of **P < 1×10⁻⁵** for visualization, reflecting the reduced multiple testing burden as well as reduced statistical power of X-chromosome-only analyses compared to autosome-centric genome-wide association studies. The backend peak-calling threshold is set to `MANHATTAN_PEAK_PVAL_THRESHOLD=1e-5` accordingly.
 
 ### 4. Gene label density
-The standard PheWeb2 framework labels a limited number of gene names on Manhattan plots, optimized for genome-wide views. Since geneXplore displays only the X chromosome, we increased the maximum number of gene labels displayed per plot to 12, with labels restricted to variants reaching **P < 1×10<sup>-6</sup>** and a minimum inter-label distance of 1 Mb to avoid overlapping annotations, improving the interpretability of X-chromosome association landscapes. 
+The standard PheWeb2 framework labels a limited number of gene names on Manhattan plots, optimized for genome-wide views. Since geneXplore displays only the X chromosome, we increased the maximum number of gene labels displayed per plot to 12, with labels restricted to variants reaching **P < 1×10<sup>-5</sup>**, a minimum inter-label distance of 1 Mb, and suppression of labels that would overlap a more significant neighboring label, improving the interpretability of X-chromosome association landscapes (see [`gene_label_settings.md`](example_codes/04_browser_configuration/gene_label_settings.md)).
 
-### 5. GRCh38 Liftover
-All summary statistics are aligned to **GRCh38 (hg38)** prior to ingestion.
+### 5. Preprocessing
+All summary statistics are aligned to **GRCh38 (hg38)** prior to ingestion. The preprocessing steps (liftover, non-PAR restriction, allele alignment, and male coding harmonization) are in [`example_codes/01_preprocessing/`](example_codes/01_preprocessing/).
 
 ---
 
@@ -64,19 +64,24 @@ geneXplore_XWAS_Browser/
 ├── user_guide.md                            ← geneXplore user guide
 │
 ├── example_codes/
-│   ├── 01_xwas_modeling/
-│   │   ├── rXCI_eXCI_genotype_modeling.R    ← PLINK raw genotype modeling
-│   │   └── eXCI_meta_analysis.R             ← random effects meta-analysis
-│   │                                           from male/female summary stats
-│   ├── 02_preprocessing/
-│   │   └── summary_stat_preprocessing.R     ← GRCh38 liftover & formatting/QC before
-│   │                                          pheweb2 ingestion
-|   ├── 03_pheweb_override/
-│   │   └── manhattan.py                     ← BIN_LENGTH=3e4 fix
-│   │ 
+│   ├── 01_preprocessing/
+│   │   ├── README.md                            ← order of steps and final format
+│   │   ├── 01_liftover_format.R                 ← GRCh38 liftover & formatting/QC before pheweb2 ingestion
+│   │   ├── 02_remove_par.R                      ← remove pseudoautosomal (PAR) variants
+│   │   ├── 03_flip_ref_alt.py                   ← align REF/ALT to dbSNP v157 (hg38)
+│   │   └── 04_harmonize_male_coding.R           ← convert male 0/1 to 0/2
+│   │
+│   ├── 02_xwas_modeling/
+│   │   └── xci_meta_analysis.R                  ← eXCI / rXCI meta-analysis from
+│   │                                              male/female summary stats
+│   │
+│   ├── 03_pheweb_override/
+│   │   └── manhattan.py                         ← BIN_LENGTH=3e4 fix
+│   │
 │   └── 04_browser_configuration/
-│       └── update_significance_threshold.md ← sync P<1e-5 across
-│                                               frontend and backend
+│       ├── update_significance_threshold.md     ← sync P<1e-5 across frontend and backend
+│       └── gene_label_settings.md               ← gene label rules on
+│                                                  Manhattan/Miami plots
 └── docs/
     ├── pipeline_overview.png                ← full workflow schematic
     └── images/
