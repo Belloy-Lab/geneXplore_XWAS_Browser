@@ -109,7 +109,7 @@ Key features:
 
 The PheWAS (Phenome-Wide Association Study) plot displays association results for a single variant across all phenotypes in the browser. This is useful for assessing the pleiotropic effects of a variant of interest across traits and disease categories. From the home page you can search a variant by its chromosome position or rsID, and the resulting PheWAS plot will show the variant's associations across all phenotypes, stratifications, and categories. Users can download associations for the variant of interest across all traits and stratifications directly from the PheWAS plot page.
 
-![PheWAS plot example]()
+![PheWAS plot example](docs/images/phewas_plot_example.png)
 
 ---
 
