@@ -72,16 +72,15 @@ geneXplore_XWAS_Browser/
 │   │   └── 04_harmonize_male_coding.R           ← convert male 0/1 to 0/2
 │   │
 │   ├── 02_xwas_modeling/
-│   │   └── xci_meta_analysis.R                  ← eXCI / rXCI meta-analysis from
-│   │                                              male/female summary stats
+│   │   └── xci_meta_analysis.R                  ← eXCI / rXCI meta-analysis from male/female summary stats                          
 │   │
 │   ├── 03_pheweb_override/
 │   │   └── manhattan.py                         ← BIN_LENGTH=3e4 fix
 │   │
 │   └── 04_browser_configuration/
 │       ├── update_significance_threshold.md     ← sync P<1e-5 across frontend and backend
-│       └── gene_label_settings.md               ← gene label rules on
-│                                                  Manhattan/Miami plots
+│       └── gene_label_settings.md               ← gene label rules on Manhattan/Miami plots
+│                                                  
 └── docs/
     ├── pipeline_overview.png                ← full workflow schematic
     └── images/
